@@ -18,6 +18,7 @@ namespace cats {
 			                               SDL.SDL_WindowFlags.SDL_WINDOW_SHOWN);
 			renderer = SDL.SDL_CreateRenderer(window, -1,
 			                                  SDL.SDL_RendererFlags.SDL_RENDERER_ACCELERATED);
+			SDL.SDL_RenderSetLogicalSize (renderer, width, height);
 			SDL.SDL_SetRenderDrawColor (renderer, 0x00, 0x00, 0x00, 0xFF);
 		}
 	}
