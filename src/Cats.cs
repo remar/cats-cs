@@ -21,5 +21,14 @@ namespace cats {
 			SDL.SDL_RenderSetLogicalSize (renderer, width, height);
 			SDL.SDL_SetRenderDrawColor (renderer, 0x00, 0x00, 0x00, 0xFF);
 		}
+
+		public void Redraw() {
+			SDL.SDL_RenderClear (renderer);
+			SDL.SDL_RenderPresent (renderer);
+		}
+
+		public void SetBackgroundColor(byte red, byte green, byte blue) {
+			SDL.SDL_SetRenderDrawColor (renderer, red, green, blue, 0xFF);
+		}
 	}
 }
