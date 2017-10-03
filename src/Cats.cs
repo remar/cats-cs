@@ -51,5 +51,9 @@ namespace cats {
 			spriteInstances.Add (spriteId, new SpriteInstance (spriteDefinitions [spritename]));
 			return spriteId;
 		}
+
+		public void SetSpritePosition(int spriteId, int x, int y) {
+			spriteInstances [spriteId].SetPosition (x, y);
+		}
 	}
 }

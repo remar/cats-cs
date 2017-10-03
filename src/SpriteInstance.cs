@@ -16,5 +16,10 @@ namespace cats {
 			animationState.Animate (deltaMillis);
 			animationState.Draw (renderer, x, y);
 		}
+
+		public void SetPosition (int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
 	}
 }
