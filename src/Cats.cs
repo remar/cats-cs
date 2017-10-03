@@ -52,6 +52,10 @@ namespace cats {
 			return spriteId;
 		}
 
+		public void ShowSprite(int spriteId, bool visible) {
+			spriteInstances [spriteId].Visible = visible;
+		}
+
 		public void SetSpritePosition(int spriteId, int x, int y) {
 			spriteInstances [spriteId].SetPosition (x, y);
 		}
