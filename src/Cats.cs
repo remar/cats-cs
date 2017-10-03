@@ -52,6 +52,10 @@ namespace cats {
 			return spriteId;
 		}
 
+		public void RemoveSpriteInstance(int spriteId) {
+			spriteInstances.Remove (spriteId);
+		}
+
 		public void ShowSprite(int spriteId, bool visible) {
 			spriteInstances [spriteId].Visible = visible;
 		}

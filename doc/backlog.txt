@@ -1,7 +1,6 @@
 Cats# Backlog
 =============
 
-* RemoveSpriteInstance
 * SetupTileLayer
 * LoadTileset
 * SetTile
@@ -11,6 +10,7 @@ Cats# Backlog
 Done
 ====
 
+* RemoveSpriteInstance
 * ShowSprite
 * SetAnimation
 * SetSpritePosition
