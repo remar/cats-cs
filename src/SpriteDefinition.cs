@@ -21,7 +21,11 @@ namespace cats {
 		}
 
 		public Animation GetDefaultAnimation() {
-			return animations [defaultAnimation];
+			return GetAnimation (defaultAnimation);
+		}
+
+		public Animation GetAnimation (string animation) {
+			return animations [animation];
 		}
 	}
 }

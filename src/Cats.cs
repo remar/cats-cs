@@ -55,5 +55,9 @@ namespace cats {
 		public void SetSpritePosition(int spriteId, int x, int y) {
 			spriteInstances [spriteId].SetPosition (x, y);
 		}
+
+		public void SetAnimation(int spriteId, string animation) {
+			spriteInstances [spriteId].SetAnimation (animation);
+		}
 	}
 }

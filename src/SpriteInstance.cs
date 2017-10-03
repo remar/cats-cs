@@ -21,5 +21,10 @@ namespace cats {
 			this.x = x;
 			this.y = y;
 		}
+
+		public void SetAnimation (string animation)
+		{
+			animationState.SetAnimation (spriteDefinition.GetAnimation (animation));
+		}
 	}
 }
