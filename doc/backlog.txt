@@ -10,6 +10,7 @@ Cats# Backlog
 Done
 ====
 
+* Frame index -1 should hide sprite during frame duration
 * RemoveSpriteInstance
 * ShowSprite
 * SetAnimation

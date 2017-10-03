@@ -22,6 +22,10 @@ namespace cats {
 
 		public void Draw (IntPtr renderer, int x, int y, int frame)
 		{
+			int index = frames [frame].index;
+			if (index == -1) {
+				return; // Hide sprite instance during frame duration
+			}
 			src.x = tileWidth * frames [frame].index;
 			dest.x = x;
 			dest.y = y;
