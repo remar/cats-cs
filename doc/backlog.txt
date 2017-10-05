@@ -1,15 +1,15 @@
 Cats# Backlog
 =============
 
-* SetupTileLayer
-* LoadTileset
-* SetTile
 * SetScroll
 
 
 Done
 ====
 
+* SetTile
+* LoadTileset
+* SetupTileLayer
 * Frame index -1 should hide sprite during frame duration
 * RemoveSpriteInstance
 * ShowSprite

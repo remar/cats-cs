@@ -8,6 +8,8 @@ namespace cats {
 		private IntPtr renderer = IntPtr.Zero;
 		private Dictionary<string,SpriteDefinition> spriteDefinitions = new Dictionary<string,SpriteDefinition>();
 		private Dictionary<int,SpriteInstance> spriteInstances = new Dictionary<int,SpriteInstance>();
+		private TileLayer tileLayer = null;
+		private Dictionary<string,Tileset> tilesets = new Dictionary<string,Tileset> ();
 		private int nextSpriteId = 0;
 
 		public Cats () {
@@ -30,6 +32,9 @@ namespace cats {
 		public void Redraw(float delta) {
 			int deltaMillis = (int)(delta * 1000);
 			SDL.SDL_RenderClear (renderer);
+			if (tileLayer != null) {
+				tileLayer.Draw (renderer);
+			}
 			foreach (var spriteInstance in spriteInstances) {
 				spriteInstance.Value.Draw (renderer, deltaMillis);
 			}
@@ -66,6 +71,19 @@ namespace cats {
 
 		public void SetAnimation(int spriteId, string animation) {
 			spriteInstances [spriteId].SetAnimation (animation);
+		}
+
+		public void SetupTileLayer(int width, int height, int tileWidth, int tileHeight) {
+			tileLayer = new TileLayer (width, height, tileWidth, tileHeight);
+		}
+
+		public void LoadTileset(string file) {
+			string name = Util.FilenameToName (file);
+			tilesets.Add (name, new Tileset (file));
+		}
+
+		public void SetTile(int x, int y, string tileset, int tileX, int tileY) {
+			tileLayer.SetTile (x, y, tilesets[tileset].GetTileSource(tileX, tileY));
 		}
 	}
 }

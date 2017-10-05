@@ -43,6 +43,10 @@
     <Compile Include="src\ImageCache.cs" />
     <Compile Include="src\SpriteInstance.cs" />
     <Compile Include="src\AnimationState.cs" />
+    <Compile Include="src\TileLayer.cs" />
+    <Compile Include="src\Tile.cs" />
+    <Compile Include="src\Tileset.cs" />
+    <Compile Include="src\TileSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
