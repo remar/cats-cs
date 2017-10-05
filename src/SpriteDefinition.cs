@@ -9,7 +9,6 @@ namespace cats {
 		private string defaultAnimation = null;
 
 		public SpriteDefinition (string file) {
-			Console.WriteLine (Path.GetFullPath (file));
 			JObject obj = JObject.Parse (File.ReadAllText (file));
 			JObject animationsObject = obj["animations"] as JObject;
 			foreach(var animation in animationsObject) {
