@@ -1,12 +1,11 @@
 Cats# Backlog
 =============
 
-* SetScroll
-
 
 Done
 ====
 
+* SetScroll
 * Cache tile sources
 * SetTile
 * LoadTileset

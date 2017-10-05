@@ -7,6 +7,7 @@ namespace cats {
 		private Tile[,] tiles;
 		private int width, height;
 		private int tileWidth, tileHeight;
+		private int xOffset, yOffset;
 
 		public TileLayer (int width, int height, int tileWidth, int tileHeight)
 		{
@@ -20,12 +21,17 @@ namespace cats {
 
 		public void Draw(IntPtr renderer) {
 			foreach (Tile t in tiles) {
-				t.Draw (renderer);
+				t.Draw (renderer, xOffset, yOffset);
 			}
 		}
 
 		public void SetTile (int x, int y, TileSource source) {
 			tiles [x, y].Set (source);
+		}
+
+		public void SetScroll (int x, int y) {
+			xOffset = x;
+			yOffset = y;
 		}
 
 		private void InitTiles () {

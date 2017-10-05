@@ -85,5 +85,9 @@ namespace cats {
 		public void SetTile(int x, int y, string tileset, int tileX, int tileY) {
 			tileLayer.SetTile (x, y, tilesets[tileset].GetTileSource(tileX, tileY));
 		}
+
+		public void SetScroll(int x, int y) {
+			tileLayer.SetScroll (x, y);
+		}
 	}
 }
