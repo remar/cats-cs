@@ -34,7 +34,7 @@ namespace cats {
 
 		public int GetFrameDuration (int frame)
 		{
-			return frames [0].duration;
+			return frames [frame].duration;
 		}
 
 		public int Length {
